@@ -29,24 +29,6 @@
 
 ---
 
-## Project Structure
-
-```
-python-oop/
-├── bank_account.py         # __balance, deposit, withdraw
-├── student.py              # marks validation with encapsulation
-├── password_manager.py     # secure __password access control
-├── employee.py             # salary + raise with validation
-├── abstract_shape.py       # ABC → Rectangle, Circle
-├── abstract_animal.py      # ABC → Dog, Cat, Cow
-├── abstract_vehicle.py     # ABC → Car, Bike
-├── abstract_employee.py    # ABC → FullTime, PartTime
-├── payment_system.py       # ABC → CreditCard, Cash
-├── atm_machine.py          # full ATM simulation
-└── main.py                 # runs all demos
-```
-
----
 
 ## Class Demos
 
