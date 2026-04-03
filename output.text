@@ -1,0 +1,108 @@
+--- BankAccount ---
+Deposited 500. New balance: 1500
+Withdrawn 200. Remaining: 1300
+Insufficient balance!
+Balance: 1300
+
+--- Student ---
+Marks set to: 85
+Invalid! Marks must be between 0 and 100.
+Marks: 85
+
+--- Password Manager ---
+Password updated successfully.
+Wrong password!
+Password is correct!
+
+--- Employee ---
+Salary: 50000
+Salary after 10% increase: 55000.0
+Percent cannot be negative!
+
+--- Abstract Shape ---
+Rectangle Area: 15
+Circle Area: 153.86
+
+--- Abstract Animal ---
+Dog: Woof!
+Cat: Meow!
+Cow: Moo!
+
+--- Abstract Vehicle ---
+Car started
+Car stopped
+Bike started
+Bike stopped
+
+--- Abstract Employee ---
+Full-Time Salary: 60000 per month
+Part-Time Salary: 16000 (hours x rate)
+
+--- Payment System ---
+Paid 5000 via Credit Card ending in 3456
+Paid 1000 in Cash
+
+--- ATM Machine ---
+Current Balance: 10000
+Deposited 2000. Balance: 12000
+Withdrawn 5000. Balance: 7000
+Insufficient funds!
+
+--- Theory Answers ---
+
+1. Encapsulation:
+   Wrapping data (variables) and methods together in a class, and restricting
+   direct access to private data. Access is only through defined methods.
+
+2. Abstraction:
+   Hiding complex implementation details and showing only essential features.
+   Achieved using abstract classes and methods (ABC module).
+
+3. Abstraction vs Encapsulation:
+   - Encapsulation -> hides DATA (using private variables)
+   - Abstraction   -> hides IMPLEMENTATION (using abstract methods)
+
+4. Private Variable in Python:
+   A variable with double underscore prefix e.g. __balance
+   Cannot be accessed directly outside the class.
+
+5. Abstract Class:
+   A class that cannot be instantiated directly. It has at least one
+   abstract method that must be overridden in child classes.
+
+6. Can we create object of abstract class?
+   NO. Python raises TypeError if we try.
+   Reason: abstract methods have no implementation, so object would be incomplete.
+
+7. Instance Attribute vs Class Attribute:
+   - Instance: created in __init__, belongs to each object separately
+   - Class: created outside __init__, shared by all objects
+   - Access: instance -> self.attr  |  class -> ClassName.attr
+   - If class attribute is changed -> it changes for ALL objects
+
+8. Role of self:
+   - self refers to the current object calling the method
+   - Required so each object accesses its own data
+   - Without self -> Python cannot find the object's attributes
+   - self is NOT a keyword, just a strong convention
+
+9. Encapsulation improves security:
+   - Without it: any code can accidentally change important data (e.g. balance = -100)
+   - Private variables prevent this by forcing use of controlled methods
+   - Makes code easier to maintain because data access is centralized
+
+10. Abstraction vs Encapsulation (real-life example - Car):
+    - Encapsulation -> engine parts hidden inside car body (data hiding)
+    - Abstraction   -> driver uses steering/pedals, does not know how engine works
+    - Encapsulation -> hides DATA
+    - Abstraction   -> hides IMPLEMENTATION
+    - YES, both can and should be used together
+
+11. What happens if:
+    a) No __init__ defined:
+       Python uses default constructor. Object is created but has no custom attributes.
+    b) Access private variable directly (obj.__balance):
+       AttributeError is raised. Python name-mangles it to _ClassName__balance.
+    c) Create object of abstract class:
+       TypeError: Cannot instantiate abstract class with abstract method.
+
